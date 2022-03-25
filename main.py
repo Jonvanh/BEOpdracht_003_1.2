@@ -2,24 +2,23 @@
 # part 1
 
 #1
-scorer_1 = "Gullit"
-scorer_2 = "Van Basten"
+from tkinter import N
+
+
+scorer_name_1 = "Ruud Gullit"
+scorer_name_2 = "Marco van Basten"
 
 #2
-goal_0 = 32
-goal_1 = 54
+goal_0_minute = 32
+goal_1_minute = 54
 
 #3
-scorers = scorer_1 + " scored in the " + str(goal_0) + "nd minute and later on " + scorer_2 + " scored in the " + str(goal_1) + "th minute"
-report = f"{scorers}"
+scorers = scorer_name_1 + " " + str(goal_0_minute) + ", " + scorer_name_2 + " " + str(goal_1_minute)  
+
+#4
+report = f"{scorer_name_1} scored in the {goal_0_minute}nd minute \n{scorer_name_2} scored in the {goal_1_minute}th minute"
 print(report)
 
-
-sc_go_01 = f"{scorer_1} scored in the {goal_0}nd minute"
-sc_go_02 = f"{scorer_2} scored in the {goal_1}th minute"
-
-Scoresheet = f"{sc_go_01} \n{sc_go_02}"
-print(Scoresheet)
 
 
 # part 2
@@ -46,9 +45,10 @@ print(name_short)
 
 #5
 Num_char_first_name = len(player[0:first_name_end])
-Bad_chant = (player[0:first_name_end] + "! ") * Num_char_first_name 
-good_chant = Bad_chant[:-1]
-print(good_chant)
+chant = (player[0:first_name_end] + "! ") * Num_char_first_name 
+chant = chant[:-1]
+print(chant)
 
 #6
+good_chant = chant
 print(good_chant[-1] != " ")
